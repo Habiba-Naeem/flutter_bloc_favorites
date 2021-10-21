@@ -10,7 +10,7 @@ class ColourInputEvent extends AuthEvent {
 }
 
 class NumberInputEvent extends AuthEvent {
-  final int input;
+  final String input;
 
   NumberInputEvent({required this.input});
 }

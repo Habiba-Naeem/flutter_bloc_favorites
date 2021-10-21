@@ -17,7 +17,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       yield state.copyWith(colourInput: event.input);
     }
     if (event is NumberInputEvent) {
-      yield state.copyWith(numberInput: event.input);
+      yield state.copyWith(numberInput: int.parse(event.input));
     }
     
     if (event is SubmitButtonPressedEvent) {

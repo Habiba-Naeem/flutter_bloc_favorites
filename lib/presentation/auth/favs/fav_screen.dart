@@ -76,17 +76,18 @@ class NumberInput extends StatelessWidget {
           ),
           onChanged: (v) {
             //tell bloc that Colour Changed event has happened
-            try {
+            /*try {
               context
                   .read<AuthBloc>()
                   .add(NumberInputEvent(input: int.parse(v)));
             } catch (_) {
               v = '';
-            }
+            }*/
+            context.read<AuthBloc>().add(NumberInputEvent(input: v));
           },
           validator: (v) {
             if (state.showErrors && state.numberInput != 10) {
-             return "Not Habiba's Favorite Number!";
+              return "Not Habiba's Favorite Number!";
             }
           },
         );
